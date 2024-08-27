@@ -1,0 +1,104 @@
+/* Librrary Styling Presets */
+:root {
+   /* Colors */
+   --red-color: #E50000;
+   --black-color: #1d1b1b;
+   --white-color: #f5f3f3;
+
+   /* Font Types */
+   --bold-font: 'Franklin-Gothic';
+   --body-font: 'Ebrima';
+   --sub-font: 'Lucida-Console';
+
+   /* Font Sizes Mobile */
+   --bigger-frankgot-mobile-size: 3.5625rem;
+   --big-frankgot-mobile-size: 1.875rem;
+   --mid-frankgot-mobile-size: 1.25rem;
+   --lucida-console-mobile-size: 0.875rem;
+   --ebrima-mobile-size: 0.875rem;
+   --ebrima-footer-mobile-size: 0.625rem;
+
+   /* Font Sizes Tablet */
+   --bigger-frankgot-tablet-size: 5.125rem;
+   --big-frankgot-tablet-size:1.875rem;
+   --mid-frankgot-tablet-size: 2.25rem;
+   --small-frankgot-tablet-size: 1.25rem;
+   --lucida-console-small-tablet-size: 0.75rem;
+   --lucida-console-mid-tablet-size: 0.875rem;
+   --lucida-console-big-tablet-size: 1.5625rem;
+   --ebrima-tablet-small-size: 0.75rem;
+   --ebrima-tablet-big-size: 0.875rem;
+
+    /* Font Sizes Desktop */
+    --bigger-frankgot-desktop-size: 9.375rem;
+    --big-frankgot-desktop-size: 4.375rem;
+    --mid-frankgot-desktop-size: 2.8125rem;
+    --small-frankgot-desktop-size: 2.5rem;
+    --lucida-console-small-desktop-size: 1.1875rem;
+    --lucida-console-mid-desktop-size: 1.375rem;
+    --lucida-console-big-desktop-size: 2.5rem;
+    --ebrima-desktop-small-size: 0.9375rem;
+    --ebrima-desktop-big-size: 1.5625rem;
+   
+}
+html {
+    font-size: 16px;
+}
+
+
+/* cloudconvert.com for fonts face convertion. Thank You */
+@font-face {
+    font-family: 'Franklin-Gothic';
+    src: url('../fonts/franklin-gothic.eot');
+    src: url('../fonts/franklin-gothic.otf') format('embedded-opentype'),
+        url('../fonts/franklin-gothic.woff2') format('woff2'),
+        url('../fonts/franklin-gothic.woff') format('woff'),
+        url('../fonts/franklin-gothic.ttf') format('truetype'),
+        url('../fonts/franklin-gothic.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lucida-Console';
+    src: url('../fonts/lucida-console.eot');
+    src: url('../fonts/lucida-console.otf') format('embedded-opentype'),
+        url('../fonts/lucida-console.woff2') format('woff2'),
+        url('../fonts/lucida-console.woff') format('woff'),
+        url('../fonts/lucida-console.ttf') format('truetype'),
+        url('../fonts/lucida-console.svg') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ebrima';
+    src: url('../fonts/ebrima-regular.eot');
+    src: url('../fonts/ebrima-regular.otf') format('embedded-opentype'),
+        url('../fonts/ebrima-regular.woff2') format('woff2'),
+        url('../fonts/ebrima-regular.woff') format('woff'),
+        url('../fonts/ebrima-regular.ttf') format('truetype'),
+        url('../fonts/ebrima-regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+/* TABLET CSS STYLES START */
+@media screen and (min-width: 768px) {
+
+    /* Tablet CSS */
+}
+
+
+
+/* TABLET CSS STYLES START */
+@media screen and (min-width: 1280px) {
+
+    /* Desktop CSS */
+}
