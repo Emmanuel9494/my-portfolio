@@ -1,0 +1,145 @@
+/* Librrary Styling Presets */
+:root {
+    /* Colors */
+    --red-color: #E50000;
+    --black-color: #000000;
+    --linear-black-color: #00000085;
+    --white-color: #f5f3f3;
+ 
+    /* Font Types */
+    --bold-font: 'Franklin-Gothic';
+    --body-font: 'Ebrima';
+    --sub-font: 'Lucida-Console';
+ 
+    /* Font Sizes Mobile */
+    --frankgot-mobile-bigger-size: 3.75rem;
+    --frankgot-mobile-big-size: 2.8125rem;
+    --frankgot-mobile-mid-size: 1.875rem;
+    --frankgot-mobile-small-size: 1.25rem;
+    --lucida-console-mobile-size: 0.875rem;
+    --ebrima-mobile-small-size: 0.75rem;
+    --ebrima-mobile-big-size: 0.875rem;
+    --ebrima-mobile-footer-size: 0.625rem;
+ 
+    /* Font Sizes Tablet */
+    --frankgot-tablet-bigger-size: 6.25rem;
+    --frankgot-tablet-big-size:3.75rem;
+    --frankgot-tablet-mid-size: 2.8125rem;
+    --frankgot-tablet-small-size: 1.25rem;
+    --lucida-console-tablet-small-size: 0.75rem;
+    --lucida-console-tablet-mid-size: 0.9375rem;
+    --lucida-console-tablet-big-size: 1.5625rem;
+    --ebrima-tablet-small-size: 0.75rem;
+    --ebrima-tablet-big-size: 0.9375rem;
+ 
+     /* Font Sizes Desktop */
+     --frankgot-desktop-bigger-size: 9.375rem;
+     --frankgot-desktop-big-size: 5.625rem;
+     --frankgot-desktop-mid-size: 3.75rem;
+     --frankgot-desktop-small-size:  2.5rem;
+     --lucida-console-desktop-small-size: 1.1875rem;
+     --lucida-console-desktop-mid-size: 1.375rem;
+     --lucida-console-desktop-big-size: 1.875rem;
+     --lucida-console-desktop-bigger-size: 2.5rem;
+     --ebrima-desktop-small-size: 0.9375rem;
+     --ebrima-desktop-big-size: 1.25rem;
+    
+ }
+ 
+ /* cloudconvert.com for fonts face convertion. Thank You */
+ @font-face {
+     font-family: 'Franklin-Gothic';
+     src: url('../fonts/franklin-gothic.eot');
+     src: url('../fonts/franklin-gothic.otf') format('embedded-opentype'),
+         url('../fonts/franklin-gothic.woff2') format('woff2'),
+         url('../fonts/franklin-gothic.woff') format('woff'),
+         url('../fonts/franklin-gothic.ttf') format('truetype'),
+         url('../fonts/franklin-gothic.svg') format('svg');
+     font-weight: 900;
+     font-style: normal;
+     font-display: swap;
+ }
+ 
+ @font-face {
+     font-family: 'Lucida-Console';
+     src: url('../fonts/lucida-console.eot');
+     src: url('../fonts/lucida-console.otf') format('embedded-opentype'),
+         url('../fonts/lucida-console.woff2') format('woff2'),
+         url('../fonts/lucida-console.woff') format('woff'),
+         url('../fonts/lucida-console.ttf') format('truetype'),
+         url('../fonts/lucida-console.svg') format('svg');
+     font-weight: 100;
+     font-style: normal;
+     font-display: swap;
+ }
+ 
+ @font-face {
+     font-family: 'Ebrima';
+     src: url('../fonts/ebrima-regular.eot');
+     src: url('../fonts/ebrima-regular.otf') format('embedded-opentype'),
+         url('../fonts/ebrima-regular.woff2') format('woff2'),
+         url('../fonts/ebrima-regular.woff') format('woff'),
+         url('../fonts/ebrima-regular.ttf') format('truetype'),
+         url('../fonts/ebrima-regular.svg') format('svg');
+     font-weight: 400;
+     font-style: normal;
+     font-display: swap;
+ }
+ 
+ /* Linear Background Setup */
+ .linear-bg{
+     position: absolute;
+     opacity: 0.4;
+     inset: 0;
+     z-index: 1;
+     background: linear-gradient(1800deg, var(--linear-black-color) 0%, var(--linear-black-color) 20%, var(--red-color) 50%, var(--red-color) 60%, var(--linear-black-color) 80%, var(--linear-black-color) 100%);      
+ }
+ 
+ html {
+     font-size: 16px;
+     
+ }
+ body{
+     background-color: var(--black-color);
+ }
+
+
+
+
+ /* MOBILE CSS STYLES START */
+ /* INDEX.HTML Section Mobile CSS Start */
+ /* Mobbile Header Starts */
+
+/* Mobile Header End */
+
+
+
+
+/* MOBILE CSS STYLES END */
+
+/* TABLET CSS STYLES START */
+@media screen and (min-width: 768px) {
+
+    /* Tablet CSS */
+     /* INDEX.HTML Section TABLET CSS START*/
+    
+    /* TABLET HEADER SECTION END */
+    
+   
+   
+}
+/* TABLET CSS STYLES END */
+
+
+/* DESKTOP CSS STYLES START */
+@media screen and (min-width: 1280px) {
+
+
+    /* INDEX.HTML Section Desktop CSS START */
+    /* START DESKTOP HEADER SECTION */
+    
+
+    /* DESKTOP HEADER SECTION END */
+
+}
+/* DESKTOP CSS STYLES END */

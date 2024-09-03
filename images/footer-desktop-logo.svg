@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="368" height="329" viewBox="0 0 368 329">
+  <g id="footer-desktop-logo" transform="translate(-590.492 -2251.412)">
+    <text id="E.O" transform="translate(774.259 2435.292)" fill="#fdffff" font-size="44" font-family="Ebrima" letter-spacing="0.1em"><tspan x="-36.884" y="0">E.O</tspan></text>
+    <g id="Group_96" data-name="Group 96" transform="translate(654.961 2309.123)">
+      <path id="Path_86" data-name="Path 86" d="M18.961,10.316,147.405,24.96,128.444,14.644,0,0Z" transform="matrix(-0.809, -0.588, 0.588, -0.809, 119.253, 213.59)" fill="#fdffff"/>
+      <path id="Path_87" data-name="Path 87" d="M18.961,14.644,147.4,0,128.444,10.316,0,24.96Z" transform="matrix(-0.809, 0.588, -0.588, -0.809, 133.924, 20.193)" fill="#fdffff"/>
+      <path id="Path_88" data-name="Path 88" d="M18.961,14.644,147.4,0,128.444,10.316,0,24.96Z" transform="matrix(0.809, -0.588, 0.588, 0.809, 104.001, 193.397)" fill="#fdffff"/>
+      <path id="Path_89" data-name="Path 89" d="M18.961,10.316,147.4,24.96,128.444,14.644,0,0Z" transform="matrix(0.809, 0.588, -0.588, 0.809, 118.672, 0)" fill="#fdffff"/>
+    </g>
+    <g id="Group_97" data-name="Group 97" transform="translate(626.846 2284.049)">
+      <path id="Path_86-2" data-name="Path 86" d="M23.683,12.886,184.116,31.176,160.433,18.291,0,0Z" transform="matrix(-0.809, -0.588, 0.588, -0.809, 148.953, 263.727)" fill="#fdffff"/>
+      <path id="Path_87-2" data-name="Path 87" d="M23.683,18.291,184.116,0,160.433,12.886,0,31.176Z" transform="matrix(-0.809, 0.588, -0.588, -0.809, 167.278, 25.222)" fill="#fdffff"/>
+      <path id="Path_88-2" data-name="Path 88" d="M23.683,18.291,184.116,0,160.433,12.886,0,31.176Z" transform="matrix(0.809, -0.588, 0.588, 0.809, 128.012, 238.504)" fill="#fdffff"/>
+      <path id="Path_89-2" data-name="Path 89" d="M23.683,12.886,184.116,31.176,160.433,18.291,0,0Z" transform="matrix(0.809, 0.588, -0.588, 0.809, 146.336, 0)" fill="#fdffff"/>
+    </g>
+    <g id="Group_98" data-name="Group 98" transform="translate(590.492 2251.412)">
+      <path id="Path_86-3" data-name="Path 86" d="M29.477,16.038,229.163,38.8,199.686,22.766,0,0Z" transform="matrix(-0.809, -0.588, 0.588, -0.809, 185.397, 329)" fill="#fdffff"/>
+      <path id="Path_87-3" data-name="Path 87" d="M29.477,22.766,229.163,0,199.686,16.038,0,38.8Z" transform="matrix(-0.809, 0.588, -0.588, -0.809, 208.206, 31.393)" fill="#fdffff"/>
+      <path id="Path_88-3" data-name="Path 88" d="M29.477,22.766,229.163,0,199.686,16.038,0,38.8Z" transform="matrix(0.809, -0.588, 0.588, 0.809, 159.794, 297.607)" fill="#fdffff"/>
+      <path id="Path_89-3" data-name="Path 89" d="M29.477,16.038,229.163,38.8,199.686,22.766,0,0Z" transform="matrix(0.809, 0.588, -0.588, 0.809, 182.603, 0)" fill="#fdffff"/>
+    </g>
+  </g>
+</svg>
