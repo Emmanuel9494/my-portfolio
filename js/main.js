@@ -57,3 +57,68 @@ function swapMenuIcon() {
 }
 // Adding event listeners
 Menubutton.addEventListener("click", swapMenuIcon, false);
+
+// mode switcher//////
+const toggleButton = document.getElementById('dark-mode-toggle');
+
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+// //////////
+let currentIndex = 0; // Track the current slide index
+const slides = document.querySelectorAll('.expe-slide'); // All slides
+const circles = document.querySelectorAll('.circle'); // All circles
+let startX = 0; // Store the starting X position for touch
+
+function showSlide(index) {
+    // Hide all slides and reset circles
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        circles[i].classList.remove('active');
+    });
+
+    // Show the current slide and set the corresponding circle active
+    slides[index].classList.add('active');
+    circles[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length; // Loop through slides
+    showSlide(currentIndex);
+}
+
+function previousSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop backwards through slides
+    showSlide(currentIndex);
+}
+
+// Initialize the first slide
+showSlide(currentIndex);
+
+// Automatically slide every 4 seconds
+const autoSlide = setInterval(nextSlide, 4000);
+
+// Event listeners for manual circle clicks (optional)
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        clearInterval(autoSlide); // Stop auto-slide on manual interaction
+        currentIndex = index;
+        showSlide(currentIndex);
+    });
+});
+
+// Touch event handling for swipe
+document.querySelector('#expe-main').addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX; // Get the initial touch position
+});
+
+document.querySelector('#expe-main').addEventListener('touchend', (e) => {
+    let endX = e.changedTouches[0].clientX; // Get the position when touch ends
+
+    // Determine swipe direction
+    if (startX > endX + 50) {
+        nextSlide(); // Swipe left -> show next slide
+    } else if (startX < endX - 50) {
+        previousSlide(); // Swipe right -> show previous slide
+    }
+});
