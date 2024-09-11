@@ -87,21 +87,49 @@
 }
 
 /* Linear Background Setup */
-.linear-bg{
+.linear-bg {
     position: absolute;
-    opacity: 0.4;
+    opacity: 0.3;
     inset: 0;
-    z-index: 1;
-    background: linear-gradient(1800deg, var(--linear-black-color) 0%, var(--linear-black-color) 20%, var(--red-color) 50%, var(--red-color) 60%, var(--linear-black-color) 80%, var(--linear-black-color) 100%);      
+    /* z-index: -10; */
+    top: 20;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(1800deg, var(--linear-black-color) 0%, var(--linear-black-color) 20%, var(--red-color) 50%, var(--red-color) 60%, var(--linear-black-color) 80%, var(--linear-black-color) 100%); 
+    align-self:center;  
+}
+boody {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+boody.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #ff0000;
+}
+.mode--toggle {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    /* Positioning for bottom left floating effect */
+    position: fixed;
+    bottom: 20px;  /* Distance from the bottom of the screen */
+    left: 20px;    /* Distance from the left side of the screen */
+    z-index: 1000; /* Ensures it's on top of other elements */
 }
 
-html {
+html.lenis {
+    height: auto;
+    background-color: var(--white-color);
     font-size: 16px;
-    
 }
-body{
-    background-color: var(--black-color);
-}
+
 
 
 /* MOBILE CSS STYLES START */
@@ -115,6 +143,7 @@ body{
    display: grid;
    justify-content: center; 
    align-items: center;
+   background-color: #000000;
 }
 
 .owner-name2{
@@ -187,14 +216,28 @@ body{
 /* INTRO.HTML Section Mobile CSS END */
 /* //////////////////////////////////////////////// */
 /* INDEX.HTML Section Mobile CSS Start */
- /* Mobbile Header Starts */
+ /* MOBILE HEADER START */
+ 
+
  .no-use{
     display: none;
  }
+
  #header{
+    background-color: var(--black-color);
     height: 2.125rem;
     align-content: center;
     height: 70px;
+    /* position: sticky; */
+    /* z-index: 9; */
+}
+#top-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 996; 
+    background-color: var(--black-color);
 }
 .mobilie-top-logo{
    
@@ -243,7 +286,167 @@ body{
     width: 40px;
     height: 40px;
 }
-/* Mobile Header End */
+/* MOBILE HEADER END */
+/* INTRODUCTION MOBILE  */
+.mobile-hero{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    background-color: var(--black-color);
+}
+.mobile-hero video{
+    width: 100%;
+    align-items: center;
+    object-fit: cover;
+    height: 200px;
+    opacity: 0.5;
+    overflow: hidden;
+}
+#intro-welcome-text{
+    color: var(--black-color);
+    /* margin-top: 10px; */
+    z-index: 5;
+    text-align: center;
+    font-weight:lighter;
+}
+#intro-welcome-text .top-text-welcome1{
+    /* display: flex; */
+   /* width: 341px; */
+    /* margin-top: -230px; */
+    /* margin-left: 120px; */
+    flex-direction: column;
+   
+}
+#intro-welcome-text .top-text-welcome1 .ttw1-a{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: var(--bold-font);
+    font-size: var(--frankgot-mobile-small-size);
+    font-weight:bolder;
+    
+}
+#intro-welcome-text .top-text-welcome1 .ttw1-b{
+    /* text-align: center; */
+    font-family: var(--body-font);
+    font-size: var(--ebrima-mobile-small-size);
+    line-height: 20px;
+    letter-spacing: 2px;
+    /* word-spacing: 7px; */
+}
+#intro-welcome-text .top-text-welcome2{
+    /* width: 341px; */
+    margin-top: 15px;
+    font-family: var(--body-font);
+    font-size: var(--ebrima-mobile-small-size);
+    line-height: 20px;
+    letter-spacing: 2px;
+    /* word-spacing: 4px; */
+}
+#intro-welcome-text .top-text-welcome2 span{
+    font-weight: bold;
+    text-transform: uppercase;
+    /* color: #ece007; */
+    color: var(--white-color);
+    background-color: var(--black-color);
+    padding: 1px;
+}
+.main-text-switch{
+    z-index: 1;
+    justify-self: center; 
+   align-self: center;
+   text-transform: uppercase;
+   margin-top: -13rem;
+   
+}
+.body-text-switch{
+    z-index: 1;
+    justify-self: center; 
+   align-self: center;
+   text-transform: uppercase;
+   margin-top: -13rem;
+   
+}
+/* Mobile Experienced Start*/
+/* Apply Flexbox to the container */
+/* Make the section a positioning reference */
+#expe-main {
+    position: relative;
+    height: 150px; 
+}
+
+/* Style the container holding the images */
+.triangle-edge {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%); /* Vertically center the container */
+}
+
+/* Style the left image */
+.triangle-edge img:first-child {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the left image */
+}
+
+/* Style the right image */
+.triangle-edge img:last-child {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the right image */
+}
+
+
+.expe-head{
+    display: flex;
+    font-family: var(--bold-font);
+    font-size: var(--frankgot-mobile-small-size);
+    justify-content: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.expe-sub{
+    display: flex;
+    font-family: var(--body-font);
+    font-size: var(--ebrima-mobile-small-size);
+    justify-content: center;
+    /* padding: 10px; */
+}
+.expe-note{
+    display: flex;
+    font-family: var(--body-font);
+    font-size: var(--ebrima-mobile-small-size);
+    justify-content: center;
+    text-align: center;
+    padding: 10px 15px 0 15px;
+    line-height: 20px;
+}
+#expe-main #slider-circle {
+    display: flex;
+    justify-content: space-between; /* Space the circles evenly */
+    align-items: center;
+    width: 50%; /* Adjust based on your layout */
+    padding: 10px;
+    margin-top: 20px;
+    align-self: center;
+    margin-left: 90px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--black-color); 
+    border: 2px solid  var(--black-color); 
+    border-radius: 50%; 
+    padding: 8px;
+}
+
+/* Mobile Experienced END*/
+
 
 /* MOBILE CSS STYLES END */
 
@@ -252,6 +455,9 @@ body{
 
     /* Tablet CSS */
      /* INTRO.HTML Section TABLET CSS START*/
+     html.lenis {
+        background-color: var(--black-color);
+    }
     .no-use{
         display: block;
     }
@@ -270,6 +476,7 @@ body{
         z-index: 2;
         text-transform: uppercase;
         align-items: center; 
+        align-self: center;
              
     }
     .owner-name span{
@@ -305,9 +512,13 @@ body{
      .no-use2{
         display: none;
      }
+    
     #header{
+        background-color: var(--black-color);
         height: 2.125rem;
         align-content: center;
+        position: sticky;
+        z-index: 9;
     }
     #owners-initial{
         font-family: var(--body-font);
@@ -402,7 +613,225 @@ body{
         opacity: 1;
     }
     /* TABLET HEADER SECTION END */
+    /* Tablet Welcome Intro Section */
+    #top-nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 992; 
+        background-color: var(--black-color);
+    }
+    #intro-welcome{
+        /* background-image: url(../images/blk-whte-test.jpg);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        filter: grayscale(10%); 
+        opacity: 0.2; 
+        z-index: -21; */
+        margin-top: 25px;
+        height: 700px;
+        /* align-items: center; */
+    }
+    #intro-welcome-image{
+        /* position: relative; */
+        display: flex;
+        z-index: 1;
+        justify-content: space-between;
+        filter: grayscale(100%);
+    }
+    .box1{
+        background-color: var(--white-color);
+        width: 101px;
+        height: 260px;
+        margin-top: 20px;
+        align-self: start;
+        background-image: url(../images/linkden-logo.svg);
+    }
+    .box2{
+        background-color: var(--white-color);
+        width: 101px;
+        height: 90px;
+        margin-top:-55px;
+        align-self: center;
+        background-image: url(../images/linkden-logo.svg);
+    }
+    .box3{
+        background-color: var(--white-color);
+        width: 101px;
+        height: 90px;
+        margin-top:-55px;
+        align-self: center;
+        background-image: url(../images/linkden-logo.svg);
+    }
+    .box4{
+        background-color: var(--white-color);
+        width: 101px;
+        height: 260px;
+        margin-top:190px;
+        background-image: url(../images/linkden-logo.svg);
+       
+    }
+    #intro-welcome-text{
+        color: var(--white-color);
+        margin-top: -280px;
+        z-index: 5;
+    }
+    #intro-welcome-text .top-text-welcome1{
+        display: flex;
+       width: 341px;
+        margin-top: -230px;
+        margin-left: 120px;
+        flex-direction: column;
+       
+    }
+    #intro-welcome-text .top-text-welcome1 .ttw1-a{
+        text-align: center;
+        margin-bottom: 15px;
+        font-family: var(--bold-font);
+        font-size: var(--frankgot-tablet-small-size);
+        font-weight:bolder;
+        
+    }
+    #intro-welcome-text .top-text-welcome1 .ttw1-b{
+        text-align: right;
+        font-family: var(--body-font);
+        font-size: var(--ebrima-tablet-small-size);
+        line-height: 18px;
+        letter-spacing: 2px;
+        word-spacing: 7px;
+    }
+    #intro-welcome-text .top-text-welcome2{
+        width: 341px;
+        margin-top: 125px;
+        font-family: var(--body-font);
+        font-size: var(--ebrima-tablet-small-size);
+        line-height: 20px;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+    }
+    #intro-welcome-text .top-text-welcome2 span{
+        font-weight: bold;
+        text-transform: uppercase;
+        /* color: #ece007; */
+        color: var(--white-color);
+    }
+    #action-btn button{
+        position: relative;
+        display: grid;
+        font-family: var(--body-font);
+        font-size: var(--ebrima-tablet-small-size);
+        color: var(--white-color);
+        height: 22px;
+        width: 100px;
+        word-spacing: 7px;
+        background-color: var(--white-color);
+        border-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        text-transform: uppercase;
+        margin-top: -150px;
+        z-index: 5;
+        /* border: 1px solid var(--white-color);  */
+        position: relative;
+        overflow: hidden; 
+        background: linear-gradient(to left, var(--red-color) 50%, var(--black-color) 50%);
+        background-size: 200% 100%; 
+        background-position: 100% bottom; 
+        transition: background-position 0.5s ease-in-out; 
+        align-items: center;
+    }
+    #action-btn button:hover{
+        color: var(--white-color);
+        background-color: none;
+        border-color: var(--white-color);
+        background-position: 100% bottom;
+        border: 1px solid var(--white-color); 
+        transition: border 1s ease-in-out, background-position .5s ease-in-out;
+        background: linear-gradient(to right, var(--red-color) 50%, var(--black-color) 50%);
+        background-size: 200% 100%; 
+    }
+    /* Four video-section Tablet*/
+   
+    .four-vid{
+        /* position: relative; */
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-top: -150px;
+        /* background-color: var(--red-color); */
+        overflow: hidden;
+        align-items: center;
+        /* filter: grayscale(100%); */
+        z-index: 5;
+
+    }
+    .four-vid video{
+        width: 161px;
+        height: 495px;
+        align-items: center;
+        object-fit: cover;
+        /* height: 200px; */
+        opacity: 1;
+        overflow: hidden;
+         filter: grayscale(100%);
+    }
     
+    #four-box-vid{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #four-box-vid video:nth-of-type(2) {
+        margin-top: 50px;
+    }
+
+    #four-box-vid video:nth-of-type(3) {
+        margin-top: 100px;
+    }
+    
+    #four-box-vid video:nth-of-type(4) {
+        margin-top: 150px;
+    }
+
+    #four-box-vid video:nth-of-type(5) {
+        margin-top: 200px;
+    }
+    .use{
+        display: block;
+    }
+    .body-text-switch{
+        /* display: flex; */
+        position: relative;
+        z-index: 2;
+        justify-self: center; 
+       align-self: center;
+       text-transform: uppercase;
+       margin-top: -25rem;
+       
+    }
+    .top-text-switch,
+.bottom-text-switch{
+    font-family: var(--bold-font);
+    font-size: var(--frankgot-tablet-mid-size);
+    color:transparent;
+    -webkit-text-stroke:1px var(--white-color);
+    font-weight: bold;
+    justify-content: center; 
+   align-items: center;
+   display: grid;
+}
+
+.middle-text-switch{
+    font-family: var(--bold-font);
+    font-size: var(--frankgot-tablet-bigger-size);
+    color:var(--white-color);
+    justify-content: center; 
+   align-items: center;
+   display: grid;
+   -webkit-text-stroke:1px var(--black-color);
+}
+
    
    
 }
@@ -476,6 +905,218 @@ body{
     }
 
     /* DESKTOP HEADER SECTION END */
+
+    /* Desktop Welcome Intro Section */
+   
+
+    #top-nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 992; 
+        background-color: var(--black-color);
+    }
+    #intro-welcome{
+        /* background-image: url(../images/blk-whte-test.jpg);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        filter: grayscale(10%); 
+        opacity: 0.2; 
+        z-index: -21; */
+        margin-top: 45px;
+        height: 700px;
+        /* align-items: center; */
+    }
+    #intro-welcome-image{
+        /* position: relative; */
+        display: flex;
+        z-index: 1;
+        justify-content: space-between;
+
+    }
+    .box1{
+        background-color: var(--white-color);
+        width: 190px;
+        height: 360px;
+        margin-top: 0;
+        align-self: start;
+    }
+    .box2{
+        background-color: var(--white-color);
+        width: 190px;
+        height: 164px;
+        margin-top:-45px;
+        align-self: center;
+    }
+    .box3{
+        background-color: var(--white-color);
+        width: 190px;
+        height: 164px;
+        margin-top:-45px;
+        align-self: center;
+    }
+    .box4{
+        background-color: var(--white-color);
+        width: 190px;
+        height: 360px;
+        margin-top:198px;
+        background-image: url(../images/linkden-logo.svg);
+       
+    }
+    #intro-welcome-text{
+        color: var(--white-color);
+        margin-top: -280px;
+        z-index: 5;
+    }
+    #intro-welcome-text .top-text-welcome1{
+        display: flex;
+       width: 602px;
+        margin-top: -325px;
+        margin-left: 200px;
+        flex-direction: column;
+       
+    }
+    #intro-welcome-text .top-text-welcome1 .ttw1-a{
+        text-align: center;
+        margin-bottom: 15px;
+        font-family: var(--bold-font);
+        font-size: var(--frankgot-desktop-small-size);
+        font-weight:bolder;
+        
+    }
+    #intro-welcome-text .top-text-welcome1 .ttw1-b{
+        text-align: right;
+        font-family: var(--body-font);
+        font-size: var(--ebrima-desktop-small-size);
+        line-height: 25px;
+        letter-spacing: 2px;
+        word-spacing: 7px;
+    }
+    #intro-welcome-text .top-text-welcome2{
+        width: 602px;
+        margin-top: 230px;
+        font-family: var(--body-font);
+        font-size: var(--ebrima-desktop-small-size);
+        line-height: 30px;
+        letter-spacing: 2px;
+        word-spacing: 7px;
+    }
+    #intro-welcome-text .top-text-welcome2 span{
+        font-weight: bold;
+        text-transform: uppercase;
+        /* color: #ece007; */
+        color: var(--white-color);
+    }
+    #action-btn button{
+        font-family: var(--body-font);
+        font-size: var(--ebrima-desktop-big-size);
+        color: var(--white-color);
+        height: 40px;
+        width: 190px;
+        letter-spacing: 3px;
+        word-spacing: 7px;
+        background-color: var(--white-color);
+        border-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        margin-top: -40px;
+        text-transform: uppercase;
+        align-items: center;
+        /* border: 1px solid var(--white-color);  */
+        position: relative;
+        overflow: hidden; 
+        background: linear-gradient(to left, var(--red-color) 50%, var(--black-color) 50%);
+        background-size: 200% 100%; 
+        background-position: 100% bottom; 
+        transition: background-position 0.5s ease-in-out;
+    }
+    #action-btn button:hover{
+        color: var(--white-color);
+        background-color: none;
+        border-color: var(--white-color);
+        background-position: 100% bottom;
+        border: 1px solid var(--white-color); 
+        transition: border 1s ease-in-out, background-position .5s ease-in-out;
+        background: linear-gradient(to right, var(--red-color) 50%, var(--black-color) 50%);
+        background-size: 200% 100%; 
+    }
+
+    /* Four video-section Desktop*/
+    .four-vid{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-top: -50px;
+        background-color: var(--black-color);
+        overflow: hidden;
+        align-items: center;
+     
+
+    }
+    .four-vid video{
+        width: 290px;
+        height: 741px;
+        align-items: center;
+        object-fit: cover;
+        opacity: 1;
+        overflow: hidden;
+    }
+    
+    #four-box-vid{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #four-box-vid video:nth-of-type(2) {
+        margin-top: 50px;
+    }
+
+    #four-box-vid video:nth-of-type(3) {
+        margin-top: 100px;
+    }
+    
+    #four-box-vid video:nth-of-type(4) {
+        margin-top: 150px;
+    }
+
+    #four-box-vid video:nth-of-type(5) {
+        margin-top: 200px;
+    }
+    .use{
+        display: block;
+    }
+    .body-text-switch{
+        /* display: flex; */
+        position: relative;
+        z-index: 2;
+        justify-self: center; 
+       align-self: center;
+       text-transform: uppercase;
+       margin-top: -40rem;
+       
+    }
+    .top-text-switch,
+.bottom-text-switch{
+    font-family: var(--bold-font);
+    font-size: var(--frankgot-desktop-mid-size);
+    color:transparent;
+    -webkit-text-stroke:1px var(--white-color);
+    font-weight: bold;
+    justify-content: center; 
+   align-items: center;
+   display: grid;
+}
+
+.middle-text-switch{
+    font-family: var(--bold-font);
+    font-size: var(--frankgot-desktop-bigger-size);
+    color:var(--white-color);
+    justify-content: center; 
+   align-items: center;
+   display: grid;
+   -webkit-text-stroke:1px var(--black-color);
+}
 
 }
 /* DESKTOP CSS STYLES END */

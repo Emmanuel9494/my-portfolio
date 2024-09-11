@@ -1,7 +1,4 @@
 /* Lenis recommended CSS Smooth Scrolling for websites */
-html.lenis {
-    height: auto;
-}
 
 .lenis.lenis-smooth {
     scroll-behavior: auto;
@@ -23,7 +20,7 @@ html.lenis {
   
 /* Scroll bar on website as user scroll */
 .scroll-bar{
-    height: 10px;
+    height: 5px;
     position: fixed;
     top:0;
     z-index: 999;
